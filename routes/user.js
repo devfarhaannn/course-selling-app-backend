@@ -1,5 +1,4 @@
-// const express = require("express")
-// const Router = express.Router
+
 const { Router } = require("express");
 const jwt = require("jsonwebtoken")
 const userRouter = Router();
@@ -33,7 +32,7 @@ userRouter.post("/signin", async function (req, res) {
             id: user._id
         }, JWT_USER_PASSWORD);
 
-        // do cookie logic
+
         res.json({
             token: token
         })
